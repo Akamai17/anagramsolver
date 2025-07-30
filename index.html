@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagrams Solver</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Anagrams Solver</h1>
+            <p>For the GamePigeon game</p>
+        </header>
+        
+        <main>
+            <div class="input-area">
+                <input type="text" id="letter-input" placeholder="Enter scrambled letters..." maxlength="12" autocomplete="off">
+                <button id="solve-button" disabled>Loading Dictionary...</button>
+            </div>
+            
+            <div id="status-message"></div>
+            
+            <div id="results-container">
+                <!-- Results will be injected here by JavaScript -->
+            </div>
+        </main>
+
+        <footer>
+            <p>Created for you. See the code on <a href="https://github.com/YOUR_USERNAME/YOUR_REPO_NAME" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
