@@ -1,0 +1,142 @@
+:root {
+    --primary-bg: #1a1a2e;
+    --secondary-bg: #16213e;
+    --card-bg: #0f3460;
+    --text-color: #e94560;
+    --light-text: #dcdcdc;
+    --input-bg: #2a2a4a;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--primary-bg);
+    color: var(--light-text);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+header p {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-top: 5px;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+#letter-input {
+    flex-grow: 1;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 2px solid var(--card-bg);
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    color: var(--light-text);
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+}
+
+#letter-input::placeholder {
+    color: #888;
+    text-transform: none;
+}
+
+#letter-input:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+#solve-button {
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#solve-button:hover:not(:disabled) {
+    background-color: #ff637f;
+}
+
+#solve-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+#status-message {
+    min-height: 24px;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+#results-container {
+    margin-top: 20px;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    padding: 20px;
+    max-height: 50vh;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.result-group {
+    margin-bottom: 20px;
+}
+
+.result-group h2 {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--card-bg);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.word-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.word-item {
+    background-color: var(--card-bg);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: var(--light-text);
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+footer a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
