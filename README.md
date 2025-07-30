@@ -4,7 +4,7 @@ A simple, fast, and powerful anagram solver designed for word games. This tool r
 
 <br>
 
-## 🚀 [**Launch the Solver**](https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/)
+## 🚀 [**Launch the Solver**](https://akamai17.github.io/anagramsolver/)
 
 <br>
 
