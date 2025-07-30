@@ -14,8 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.text();
         })
         .then(text => {
-            // Split the text into an array of words, trim whitespace
-            dictionary = text.split('\n').map(word => word.trim().toLowerCase()).filter(Boolean);
+            // --- THIS IS THE CORRECTED LINE ---
+            // Split by any standard line break (\n or \r\n) to handle cross-platform file differences.
+            dictionary = text.split(/\r?\n/).map(word => word.trim().toLowerCase()).filter(Boolean);
+            
             solveButton.disabled = false;
             solveButton.textContent = 'Find Words';
             statusMessage.textContent = `Dictionary loaded with ${dictionary.length} words.`;
