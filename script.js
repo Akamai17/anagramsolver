@@ -14,8 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.text();
         })
         .then(text => {
-            // --- THIS IS THE CORRECTED LINE ---
-            // Split by any standard line break (\n or \r\n) to handle cross-platform file differences.
+        
             dictionary = text.split(/\r?\n/).map(word => word.trim().toLowerCase()).filter(Boolean);
             
             solveButton.disabled = false;
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             statusMessage.textContent = 'Failed to load dictionary. Please refresh.';
         });
 
-    // Helper function to create a frequency map of characters in a string
+   
     const getFrequencyMap = (str) => {
         const map = {};
         for (const char of str) {
@@ -36,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return map;
     };
 
-    // Helper function to check if a word can be formed from the given letters
+   
     const canFormWord = (word, lettersMap) => {
         const wordMap = getFrequencyMap(word);
         for (const char in wordMap) {
@@ -51,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const inputLetters = letterInput.value.toLowerCase().replace(/[^a-z]/g, '');
         resultsContainer.innerHTML = '';
         
-        if (inputLetters.length < 2) {
-            statusMessage.textContent = 'Please enter at least 2 letters.';
+        if (inputLetters.length < 3) {
+            statusMessage.textContent = 'Please enter at least 3 letters.';
             return;
         }
 
@@ -65,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             for (const word of dictionary) {
                 // Pre-filter to improve performance
-                if (word.length > 1 && word.length <= inputLetters.length) {
+                if (word.length > 2 && word.length <= inputLetters.length) {
                     if (canFormWord(word, lettersMap)) {
                         foundWords.add(word);
                     }
