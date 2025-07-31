@@ -49,6 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const solveAnagrams = () => {
         const inputLetters = letterInput.value.toLowerCase().replace(/[^a-z]/g, '');
         resultsContainer.innerHTML = '';
+
+         if (inputLetters === 'cheater' || inputLetters === 'cheats') {
+        statusMessage.textContent = 'sybau🥀';
+        return;
+    }
         
         if (inputLetters.length < 3) {
             statusMessage.textContent = 'Please enter at least 3 letters.';
