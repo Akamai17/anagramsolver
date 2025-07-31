@@ -29,6 +29,7 @@ This solver uses an extremely large dictionary file (over 370,000 words) to prov
 
 *   **The initial page load may take a few seconds** as your browser downloads and processes the dictionary for the first time.
 *   **The search itself can be intensive.** After you click "Find Words," please allow a moment for the script to check all possible combinations.
+*   **Some words may not work.** The dictionary used in this program is considerably larger than the one in Gamepigeon, and as such, some words shown here may not score points. 
 
 The application is designed to be as fast as possible, but this trade-off for a better dictionary is a necessary consideration.
 
